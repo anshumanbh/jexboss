@@ -808,14 +808,7 @@ def banner():
     Print the banner
     """
     clear()
-    print_and_flush(RED1 + "\n * --- JexBoss: Jboss verify and EXploitation Tool  --- *\n"
-                 " |  * And others Java Deserialization Vulnerabilities * | \n"
-                 " |                                                      |\n"
-                 " | @author:  João Filho Matos Figueiredo                |\n"
-                 " | @contact: joaomatosf@gmail.com                       |\n"
-                 " |                                                      |\n"
-                 " | @update: https://github.com/joaomatosf/jexboss       |\n"
-                 " #______________________________________________________#\n")
+    print_and_flush(RED1)
     print_and_flush(RED1 + " @version: %s" % __version__)
     print_and_flush (ENDC)
 
@@ -1021,12 +1014,6 @@ def main():
     else:
         print_and_flush(GREEN + "\n\n * Results: \n" +
               "   The server is not vulnerable to bugs tested ... :D\n" + ENDC)
-    # infos
-    print_and_flush(ENDC + " * Info: review, suggestions, updates, etc: \n" +
-          "   https://github.com/joaomatosf/jexboss\n")
-
-    print_and_flush(GREEN + BOLD + " * DONATE: " + ENDC + "Please consider making a donation to help improve this tool,\n" +
-          GREEN + BOLD + " * Bitcoin Address: " + ENDC + " 14x4niEpfp7CegBYr3tTzTn4h6DAnDCD9C \n" )
 
 
 print_and_flush(ENDC)
@@ -1040,16 +1027,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
         #description="JexBoss v%s: JBoss verify and EXploitation Tool" %__version,
-        description=textwrap.dedent(RED1 +
-               "\n # --- JexBoss: Jboss verify and EXploitation Tool  --- #\n"
-                 " |    And others Java Deserialization Vulnerabilities   | \n"
-                 " |                                                      |\n"
-                 " | @author:  João Filho Matos Figueiredo                |\n"
-                 " | @contact: joaomatosf@gmail.com                       |\n"
-                 " |                                                      |\n"
-                 " | @updates: https://github.com/joaomatosf/jexboss      |\n"
-                 " #______________________________________________________#\n"
-                 " @version: " + __version__ + "\n" + help_usage()),
+        description=textwrap.dedent(RED1 + __version__ + "\n" + help_usage()),
         epilog="",
         prog="JexBoss"
     )
